@@ -1,14 +1,31 @@
 
+var answer = [];
+var first = [];
 var newXHR = new XMLHttpRequest();
 
 newXHR.open("GET", "http://localhost:3333/api/candidates");
 
 newXHR.send();
 
-newXHR.onload = function(response) {
+newXHR.onload = function (response) {
+    
     if (newXHR.status === 200) {
-        var answer = JSON.parse(newXHR.responseText);
+        answer = JSON.parse(newXHR.responseText);
+        first = answer;
+        load()
+    }
+}
 
+function load() {
+    setInterval(function(){clear(), render()}, 200)
+};
+function render() {
+  
+    if (answer.length == 0) {
+        
+        
+    } else {
+        
         // creating img placeholder if there is no profile picture
         imgPlaceholder = "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
 
@@ -24,17 +41,39 @@ newXHR.onload = function(response) {
             div.style = "width:18rem";
             var row = document.getElementById("row");
             var string = `<img class="card-img-top" src="` + element.avatar + `" alt="Card image cap">
-            <div class="card-body col-sm-">
-              <h5 class="text-center">` + element.name + `</h5>
-              <p class="card-text text-center">` + element.email + `</p>
-              </div>`
+        <div class="card-body col-sm-">
+        <h5 class="text-center">` + element.name + `</h5>
+        <p class="card-text text-center">` + element.email + `</p>
+        </div>`
             div.innerHTML = string;
-            
+
             row.appendChild(div);
 
-        });
-        
+        }
+        );
     }
 }
+// clearing row for re-rendering
+function clear() {
+    var row = document.getElementById("row");
+    row.innerHTML = "";
+}
+render()
+load();
+
+////// search
+
+var search = document.getElementById("search");
+
+search.addEventListener("keyup", function(e) {
+    answer = first.filter(element => {
+        if (element.name.toLowerCase().startsWith(e.target.value.toLowerCase())) {
+            return true;
+        } else return false;
+    })
+     
+    
+})
+
 
 
