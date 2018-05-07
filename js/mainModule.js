@@ -12,13 +12,13 @@ newXHR.onload = function (response) {
     if (newXHR.status === 200) {
         answer = JSON.parse(newXHR.responseText);
         first = answer;
-        load()
+        render()
     }
 }
 
-function load() {
-    setInterval(function(){clear(), render()}, 200)
-};
+// function load() {
+//     setInterval(function(){clear(), render()}, 200)
+// };
 function render() {
   
     if (answer.length == 0) {
@@ -36,7 +36,7 @@ function render() {
             // creating element
             var div = document.createElement("div");
             // adding classes to element
-            div.classList.add("card", "col-sm-3");
+            div.classList.add("card", "col-xs-6",  "col-sm-6", "col-md-4", "col-md-3");
             // adding style to element
             div.style = "width:18rem";
             var row = document.getElementById("row");
@@ -59,7 +59,6 @@ function clear() {
     row.innerHTML = "";
 }
 render()
-load();
 
 ////// search
 
@@ -71,7 +70,8 @@ search.addEventListener("keyup", function(e) {
             return true;
         } else return false;
     })
-     
+     clear();
+     render();
     
 })
 
