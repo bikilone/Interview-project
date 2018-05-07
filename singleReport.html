@@ -9,28 +9,129 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
-        <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+        crossorigin="anonymous">
 
     <title>Single report</title>
 </head>
 
 <body>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Random Name</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="align-items">
+                                <h5>Company</h5>
+                                <h2>GOOGLE</h2>
+                            </div>
+                            <div class="align-items">
+                                <h5>Interview Date</h5>
+                                <h2>GOOGLE</h2>
+                            </div>
+                            <div class="align-items">
+                                <h5>Phase</h5>
+                                <h2>GOOGLE</h2>
+                            </div>
+                            <div class="align-items">
+                                <h5>Status</h5>
+                                <h2>GOOGLE</h2>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <h5>Lorem</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ducimus dolorum error quibusdam.
+                                A quia nisi voluptate beatae temporibus explicabo, repudiandae asperiores, non molestias
+                                dignissimos ducimus illum repellendus doloremque quasi?Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Magnam iste nesciunt odio numquam sed rem laudantium amet maiores officiis
+                                molestiae nulla possimus voluptas, quaerat repudiandae alias! Iusto, et! Sapiente, cum!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <header class="bg-secondary d-flex justify-content-between m-2">
         <h1 class="p-2">Interview Reports</h1>
         <button class="p-4 rounded ">Candidates</button>
     </header>
     <main class="container">
         <div class="row">
-                <img class="col-sm-4" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png" alt="">
+            <img class="col-sm-4" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png" alt="">
             <div class="col-sm-4">
-                <div >Name:</div>
-                <div class="div">Email:</div>
+                <div>Name:
+                    <h2 class="h2">Random Name</h2>
+                </div>
+                <div class="div">Email:
+                    <h2 class="h2">Random Email</h2>
+                </div>
             </div>
             <div class="col-sm-4 ">
-                <div>Date of birth:</div>
-                <div class="div">Education:</div>
+                <div>Date of birth:
+                    <h2 class="h2">Random Birth</h2>
+                </div>
+                <div class="div">Education:
+                    <h2 class="h2">Random Education</h2>
+                </div>
             </div>
         </div>
+        <h2 class="reports">Reports</h2>
+        <table class="table table-striped m-2 table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Company</th>
+                    <th scope="col">Interview date</th>
+                    <th scope="col" colspan="2">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>bka</td>
+                    <td class="td">
+                        <a data-target="#exampleModal" data-toggle="modal">
+                            <i class="far fa-eye"></i>
+                        </a>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>bka</td>
+                    <td class="td">
+                        <a data-target="#exampleModal" data-toggle="modal">
+                            <i class="far fa-eye"></i>
+                        </a>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>bka</td>
+                    <td class="td">
+                        <a data-target="#exampleModal" data-toggle="modal">
+                            <i class="far fa-eye"></i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </main>
 
     <!-- Optional JavaScript -->

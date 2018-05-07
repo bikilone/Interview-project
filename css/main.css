@@ -2,6 +2,23 @@
   color: black; }
 
 .div {
-  margin-top: 50%; }
+  margin-top: 40%; }
+
+.reports {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+.td {
+  width: 8%; }
+
+.h2 {
+  text-indent: 5%;
+  margin-top: 5%; }
+
+a {
+  color: black; }
+
+.align-items {
+  height: 25%; }
 
 /*# sourceMappingURL=main.css.map */
