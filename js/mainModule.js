@@ -40,11 +40,11 @@ function render() {
             // adding style to element
             div.style = "width:18rem";
             var row = document.getElementById("row");
-            var string = `<img class="card-img-top" src="` + element.avatar + `" alt="Card image cap">
+            var string = `<a href="./singleReport.html"><img class="card-img-top" src="` + element.avatar + `" alt="Card image cap">
         <div class="card-body col-sm-">
         <h5 class="text-center">` + element.name + `</h5>
         <p class="card-text text-center">` + element.email + `</p>
-        </div>`
+        </div></a>`
             div.innerHTML = string;
 
             row.appendChild(div);
