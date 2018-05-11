@@ -11,6 +11,8 @@ newXHR.onload = function (response) {
     
     if (newXHR.status === 200) {
         answer = JSON.parse(newXHR.responseText);
+        console.log(answer);
+        
         first = answer;
         render()
     }
@@ -40,7 +42,7 @@ function render() {
             // adding style to element
             div.style = "width:18rem";
             var row = document.getElementById("row");
-            var string = `<a href="./singleReport.html"><img class="card-img-top" src="` + element.avatar + `" alt="Card image cap">
+            var string = `<a href="./singleReport.html"><img id="img"class="card-img-top" src="` + element.avatar + `"data-id="`+ element.id + `" alt="Card image cap">
         <div class="card-body col-sm-">
         <h5 class="text-center">` + element.name + `</h5>
         <p class="card-text text-center">` + element.email + `</p>
@@ -74,6 +76,22 @@ search.addEventListener("keyup", function(e) {
      render();
     
 })
+
+// setting id in local storage, when client click on <a>
+
+setTimeout(function() {
+    var img = document.querySelectorAll("#img");
+    img.forEach(e => 
+
+    e.addEventListener("click", function(event) {
+        var id = this.getAttribute("data-id");
+        localStorage.setItem("id", id)
+    }))
+}, 0)
+
+
+
+
 
 
 
