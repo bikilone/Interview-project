@@ -21,4 +21,19 @@ a {
 .align-items {
   height: 25%; }
 
+  .main {
+    /* display: flex; */
+    float: right;
+    /* width: 60% */
+  }
+
+.height {
+  height: 250px;
+}
+
+a {
+  cursor: pointer;
+  z-index: 1;
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -17,6 +17,7 @@
             margin: 0;
             padding: 0;
         }
+
         h2 {
             font-size: 20px !important;
             overflow-wrap: break-word;
@@ -44,24 +45,24 @@
                         <div class="col-sm-4">
                             <div class="align-items">
                                 <h5>Company</h5>
-                                <h2>GOOGLE</h2>
+                                <h2 id="company" >GOOGLE</h2>
                             </div>
                             <div class="align-items">
                                 <h5>Interview Date</h5>
-                                <h2>GOOGLE</h2>
+                                <h2 id="date">GOOGLE</h2>
                             </div>
                             <div class="align-items">
                                 <h5>Phase</h5>
-                                <h2>GOOGLE</h2>
+                                <h2 id="phase">GOOGLE</h2>
                             </div>
                             <div class="align-items">
                                 <h5>Status</h5>
-                                <h2>GOOGLE</h2>
+                                <h2 id="status">GOOGLE</h2>
                             </div>
                         </div>
                         <div class="col-sm-8">
                             <h5>Lorem</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ducimus dolorum error quibusdam.
+                            <p id="note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ducimus dolorum error quibusdam.
                                 A quia nisi voluptate beatae temporibus explicabo, repudiandae asperiores, non molestias
                                 dignissimos ducimus illum repellendus doloremque quasi?Lorem ipsum dolor sit amet, consectetur
                                 adipisicing elit. Magnam iste nesciunt odio numquam sed rem laudantium amet maiores officiis
@@ -76,10 +77,12 @@
 
     <header class="bg-secondary d-flex justify-content-between m-2">
         <h1 class="p-2">Interview Reports</h1>
-        <button class="p-4 rounded ">Candidates</button>
+        <a id="button" href="./index.html">
+            <button class="p-4 rounded ">Candidates</button>
+        </a>;
     </header>
-    <main class="container">
-        <div class="row">
+    <main  class="container">
+        <div id="height" class="main">
             <img class="col-sm-4" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png" alt="">
             <div class="col-sm-4">
                 <div>Name:
@@ -108,41 +111,25 @@
                     <th scope="col" colspan="2">Status</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="table">
                 <tr>
                     <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>bka</td>
-                    <td class="td">
-                        <a data-target="#exampleModal" data-toggle="modal">
-                            <i class="far fa-eye"></i>
-                        </a>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>bka</td>
-                    <td class="td">
-                        <a data-target="#exampleModal" data-toggle="modal">
-                            <i class="far fa-eye"></i>
-                        </a>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>bka</td>
-                    <td class="td">
-                        <a data-target="#exampleModal" data-toggle="modal">
-                            <i class="far fa-eye"></i>
-                        </a>
+                    <td>n/a</td>
+                    <td>n/a</td>
+                    <td>n/a/</td>
+                    <td>
+                        <i  class="far fa-eye"></i>
                     </td>
+
                 </tr>
+
             </tbody>
         </table>
     </main>
+
+    <!-- <a data-target="#exampleModal" data-toggle="modal">
+        <i class="far fa-eye"></i>
+    </a> -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -152,11 +139,8 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
-        <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
-        <script src="./js/singleReport.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="./js/singleReport.js"></script>
 </body>
 
 </html>

@@ -11,8 +11,6 @@ newXHR.onload = function (response) {
     
     if (newXHR.status === 200) {
         answer = JSON.parse(newXHR.responseText);
-        console.log(answer);
-        
         first = answer;
         render()
     }
@@ -51,6 +49,8 @@ function render() {
 
             row.appendChild(div);
 
+            settingId();
+
         }
         );
     }
@@ -79,7 +79,7 @@ search.addEventListener("keyup", function(e) {
 
 // setting id in local storage, when client click on <a>
 
-setTimeout(function() {
+function settingId() {
     var img = document.querySelectorAll("#img");
     img.forEach(e => 
 
@@ -87,7 +87,7 @@ setTimeout(function() {
         var id = this.getAttribute("data-id");
         localStorage.setItem("id", id)
     }))
-}, 0)
+}
 
 
 
