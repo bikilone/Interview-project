@@ -1,4 +1,39 @@
 .abc {
   color: black; }
 
+.div {
+  margin-top: 40%; }
+
+.reports {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+.td {
+  width: 8%; }
+
+.h2 {
+  text-indent: 5%;
+  margin-top: 5%; }
+
+a {
+  color: black; }
+
+.align-items {
+  height: 25%; }
+
+  .main {
+    /* display: flex; */
+    float: right;
+    /* width: 60% */
+  }
+
+.height {
+  height: 250px;
+}
+
+a {
+  cursor: pointer;
+  z-index: 1;
+}
+
 /*# sourceMappingURL=main.css.map */
